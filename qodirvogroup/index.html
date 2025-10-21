@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Santexnika xizmatlari</title>
+  <meta name="description" content="Fast & reliable plumbing and heating installations. 24/7 emergency service.">
+
+  <!-- Tailwind CDN + custom color config -->
+  <script>
+    tailwind = true
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1F2937', /* deep navy */
+            accent: '#14B8A6',  /* teal */
+            off: '#76aade'      /* off-white */
+          },
+          borderRadius: {
+            'lg-xl': '1rem'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* small helpers */
+    :root{--primary:#1F2937;--accent:#14B8A6;--off:#F9FAFB}
+    .glass{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02)); backdrop-filter: blur(6px);} 
+    /* gallery image placeholders */
+    .placeholder{background: linear-gradient(90deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));}
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-off">
+
+  <!-- NAV / HEADER -->
+  <header class="bg-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center font-bold text-primary">PH</div>
+        <div>
+          <h1 class="font-semibold text-lg">Qodirov Group</h1>
+          <p class="text-xs opacity-80">Santexnika va isitish tizimi o'rnatish jamoasi</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:underline">Xizmatlar</a>
+        <a href="#why" class="hover:underline">Nega biz ? </a>
+        <a href="#gallery" class="hover:underline">Rasmlar</a>
+        <a href="#contact" class="hover:underline">Bizga bog'lanish</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <!-- Replace #PHONE# with actual phone -->
+        <a href="tel:+998900000000" class="hidden md:inline-flex items-center gap-2 bg-accent text-primary px-4 py-2 rounded-lg font-medium">Xoziroq qo'ng'iroq qiling</a>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md hover:bg-white/10">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Ishonchli santexnika va xizmatlari isitish tizimi o'rnatish</h2>
+        <p class="mt-4 text-lg opacity-90">Sifatli va professional xizmatlar. Biz biznes va uylarga sertifakatlangan ustalar bilan Xizmat ko'rsatamiz.</p>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="tel:+998905125228" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold bg-accent text-primary shadow hover:scale-[1.01]">Call Now</a>
+          <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-white text-primary glass">Request a Callback</a>
+        </div>
+
+        <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm opacity-90">
+          <li>✅ 24/7 aloqada </li>
+          <li>✅ Tajribali va bilimli jamoa </li>
+          <li>✅ Kafolatlangan xizmatlar </li>
+        </ul>
+      </div>
+
+      <div class="relative">
+        <!-- Replace with real hero image. Using placeholder box here. -->
+        <div class="w-full h-72 md:h-96 rounded-xl placeholder flex items-center justify-center text-sm text-gray-500">[Hero image — replace with real photo]</div>
+
+        <!-- Floating card -->
+        <div class="absolute -bottom-6 left-6 bg-off p-4 rounded-lg shadow-lg w-64 border">
+          <p class="text-sm font-medium">Suv oqyaptimi ? Biz tez javob beramiz</p>
+          <a href="tel:+998905122528" class="mt-2 inline-block text-sm font-semibold text-primary">Ustaga qo'ng'iroq qiling .  +998 90 512 25 28</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-6xl mx-auto px-6 py-16">
+    <h3 class="text-2xl font-bold text-primary">Bizning xizmatlar</h3>
+    <p class="mt-2 text-gray-600">Biz turli santexnika xizmatlari va isitish tizmi o'rnatamiz . Xizmat narxlari bosh usta bilan uchrashib kelishilinadi.</p>
+
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <article class="bg-white rounded-lg shadow p-6">
+        <div class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center">🔧</div>
+        <h4 class="mt-4 font-semibold">Umumumiy santexnika va suv oqish muommolarini tuzatish</h4>
+        <a href="#contact" class="mt-4 inline-block text-sm font-medium text-accent">Buyurtma belgilash →</a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="bg-white rounded-lg shadow p-6">
+        <div class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center">🚿</div>
+        <h4 class="mt-4 font-semibold">Oshxona va hammom o'rnatish</h4>
+        <p class="mt-2 text-sm text-gray-600">Unitaz, chachagen, dush o'rnatish.</p>
+        <a href="#contact" class="mt-4 inline-block text-sm font-medium text-accent">Buyurtma belgilash →</a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="bg-white rounded-lg shadow p-6">
+        <div class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center">🔥</div>
+        <h4 class="mt-4 font-semibold">Installing Heating Systems</h4>
+        <p class="mt-2 text-sm text-gray-600">Complete setup of modern water-based and electric heating solutions for homes and offices.</p>
+        <a href="#contact" class="mt-4 inline-block text-sm font-medium text-accent">Buyurtma belgilash →</a>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="bg-white rounded-lg shadow p-6">
+        <div class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center">🌡️</div>
+        <h4 class="mt-4 font-semibold">Underfloor (Warm Flooring) Systems</h4>
+        <p class="mt-2 text-sm text-gray-600">Design and install energy-efficient underfloor heating for comfort and even temperatures.</p>
+        <a href="#contact" class="mt-4 inline-block text-sm font-medium text-accent">Buyurtma belgilash →</a>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="bg-white rounded-lg shadow p-6">
+        <div class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center">🏠</div>
+        <h4 class="mt-4 font-semibold">Radiator o'rnatish</h4>
+        <p class="mt-2 text-sm text-gray-600">Samarador isitishni ta'minlash uchun ishga professional yondashamiz.</p>
+        <a href="#contact" class="mt-4 inline-block text-sm font-medium text-accent">Buyurtma belgilash →</a>
+      </article>
+
+      
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why" class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+      <div class="col-span-2">
+        <h3 class="text-2xl font-bold text-primary">Nega bizni tanlash lozim ?</h3>
+        <p class="mt-3 text-gray-600">Biz sifat va hamyonbob xizmatni kafolatlaymiz</p>
+
+        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <li class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center">⏱</div>
+            <div>
+              <p class="font-semibold">Tezda muommolarni bartaraf qilamiz</p>
+              <p class="text-sm text-gray-600">Avariya holatlarida tez yetib kelamiz.</p>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center">📜</div>
+            <div>
+              <p class="font-semibold">Tajribali jamoa</p>
+              <p class="text-sm text-gray-600">Turli seminar , konferesiyalargan va ko'p yillab tajribaga ega guruh</p>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center">💬</div>
+            <div>
+              <p class="font-semibold">Vijdonli narlar</p>
+              <p class="text-sm text-gray-600">Xizmat narxlari usta bilan yuzma-yuz kelishilinadi</p>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center">🛠</div>
+            <div>
+              <p class="font-semibold">To'liq mas'ulyat</p>
+              <p class="text-sm text-gray-600">Biz ish tugatilganidan keyin to'liq mas'ulyatni o'z zimmamizga olamiz </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hidden md:block">
+        <div class="rounded-xl overflow-hidden border shadow placeholder h-full flex items-center justify-center">[Team photo / service photo]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold text-primary">Gallery — real jobs</h3>
+    <p class="mt-2 text-gray-600">Use authentic before/after photos to build trust. Replace placeholders with your photos.</p>
+
+    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="h-40 rounded-lg placeholder flex items-center justify-center">[Photo 1]</div>
+      <div class="h-40 rounded-lg placeholder flex items-center justify-center">[Photo 2]</div>
+      <div class="h-40 rounded-lg placeholder flex items-center justify-center">[Photo 3]</div>
+      <div class="h-40 rounded-lg placeholder flex items-center justify-center">[Photo 4]</div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="bg-off border-t">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h4 class="font-semibold">Bizga qo'ng'iroq qilish : </h4>
+        <p class="mt-3 text-sm text-gray-600">Phone (calls & WhatsApp): <br /><a href="tel:+998905122528" class="font-medium text-primary">+998905122528</a></p>
+        <p class="mt-4 text-sm text-gray-600">Ish soatlari: <br />09:00 - 18:00 </p>
+
+        <div class="mt-6">
+          <p class="text-sm font-medium">Ijtimoiy tarmoqlarimiz : </p>
+          <div class="mt-3 flex gap-3">
+            <a href="https://t.me/+998905122528" class="text-sm px-3 py-2 border rounded">Telegram</a>
+            <a href="https://www.instagram.com/misha210892?igsh=cW5uN2J6OW5xbGJh"class="text-sm px-3 py-2 border rounded">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-semibold">Qodirov Group</p>
+        <p class="text-xs opacity-80">© <span id="year"></span> Hamma huquqlar himoyalangan</p>
+      </div>
+      <div class="text-sm opacity-90">Address: Buxoro viloyati , G'ijduvon tumani </div>
+      <div class="text-sm">Phone: <a href="tel:+998900000000" class="font-medium">+998905122528</a></div>
+    </div>
+  </footer>
+
+  <!-- Sticky call button for mobile -->
+  <a href="tel:+998905122528" class="fixed bottom-4 right-4 md:hidden bg-accent text-white px-4 py-3 rounded-full shadow-lg font-semibold">Call</a>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+    // Mobile nav toggle (basic)
+    const btn = document.getElementById('mobileMenuBtn');
+    btn && btn.addEventListener('click', ()=>{ alert('Mobile menu placeholder — implement slide-in nav if needed'); });
+  </script>
+
+</body>
+</html>
